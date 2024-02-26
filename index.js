@@ -190,7 +190,6 @@ app.get("/", (req, res) => {
  */
 function syncCookies(request, response) {
     let cookies = request.headers.cookie;
-    console.log("cookies: ", cookies);
     const responseHeaders = {
         "Access-Control-Allow-Credentials": true,
         "Access-Control-Allow-Origin": request.headers.origin ? request.headers.origin : "*"
