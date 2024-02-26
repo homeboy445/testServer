@@ -210,7 +210,7 @@ function syncCookies(request, response) {
             // Expire any VWO cookies after 10 years.
             // Set the cookie on root path so that it's accessible on all paths
             // Set the domain to .<eTld+1>
-            responseHeaders["Set-Cookie"].push(`${name}=${value};path=/;domain=.<eTld+1>;expires=${new Date(Date.now() + 10 * 365 * 24 * 3600 * 1000).toGMTString()}`);
+            responseHeaders["Set-Cookie"].push(`${name}=${value};path=/;domain=.testserver-mzm3.onrender.com;expires=${new Date(Date.now() + 10 * 365 * 24 * 3600 * 1000).toGMTString()}`);
             // e.g. for a website example.abc.com eTld would be "com". So eTld+1 would be "abc.com".
             // If you are not sure about what is the value in your case, you can contact the VWO support team.
             // responseHeaders["Set-Cookie"].push(`${name}=${value};path=/;domain=.abc.com;expires=${new Date(Date.now() + 10 * 365 * 24 * 3600 * 1000).toGMTString()};`);
