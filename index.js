@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
     <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
     <script type='text/javascript' id='vwoCode'>
     window._vwo_code || (function() {
-    var account_id=644092,
+    var account_id=(new URL(location.href).searchParams.get("accountId"))||644092,
     version=2.0,
     settings_tolerance=2000,
     hide_element='body',
