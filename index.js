@@ -45,7 +45,7 @@ app.get("/", (req, res) => {
             }
         }]);
     </script>
-    <script>console.log("${userAgent}");</script>
+    <script>console.log("server user agent: '${userAgent}'");</script>
     </head>
     <body class="w3-content" style="max-width:1300px">
     
