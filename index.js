@@ -15,6 +15,7 @@ app.use(cors({
 }));
 
 app.get("/", (req, res) => {
+    const userAgent = req.headers['user-agent'];
     const smartCode = `<!-- Start VWO Async SmartCode -->
     <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
     <script type='text/javascript' id='vwoCode'>
@@ -44,6 +45,7 @@ app.get("/", (req, res) => {
             }
         }]);
     </script>
+    <script>console.log("${userAgent}");</script>
     </head>
     <body class="w3-content" style="max-width:1300px">
     
@@ -70,7 +72,7 @@ app.get("/", (req, res) => {
         </div>
       </div>
     </div>
-    
+
     <!-- Second Grid: Work & Resume -->
     <div class="w3-row">
       <div class="w3-half w3-light-grey w3-center" style="min-height:800px" id="work">
