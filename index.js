@@ -15,7 +15,7 @@ app.use(cors({
 }));
 
 app.get("/", (req, res) => {
-    const userAgent = req.headers['user-agent'];
+    const userAgent = req.get('User-Agent');
     console.log(">> UA: ", userAgent);
     const smartCode = `<!-- Start VWO Async SmartCode -->
     <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
