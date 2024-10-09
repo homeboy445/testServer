@@ -193,6 +193,7 @@ app.get("/", (req, res) => {
     </body>
     </html>
     `;
+    res.setHeader('Content-Security-Policy', "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';");
     res.send(htmlContent);
 });
 
