@@ -193,7 +193,7 @@ app.get("/", (req, res) => {
     </body>
     </html>
     `;
-    res.setHeader('Content-Security-Policy', "default-src 'self'; script-src 'self' blob: 'unsafe-inline' *; child-src *; style-src 'self' 'unsafe-inline' *;");
+    res.setHeader('Content-Security-Policy', "default-src 'self'; script-src 'self' blob: 'unsafe-inline'; child-src 'self'; style-src 'self' 'unsafe-inline';");
     res.send(htmlContent);
 });
 
