@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
     console.log(">> UA: ", userAgent);
     const smartCode = `<!-- Start VWO Async SmartCode -->
 <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
-<script type="text/javascript" id="vwoCode">
+<script type="text/javascript" id="vwoCode" nonce='testing'>
   window._vwo_code ||
     (function () {
       var account_id =
@@ -301,7 +301,7 @@ app.get("/", (req, res) => {
     </body>
     </html>
     `;
-    res.setHeader('Content-Security-Policy', "default-src 'self' *.visualwebsiteoptimizer.com app.vwo.com useruploads.vwo.io; script-src 'self' blob: *.visualwebsiteoptimizer.com app.vwo.com; child-src 'self' blob:; style-src 'self' *.visualwebsiteoptimizer.com www.w3schools.com app.vwo.com");
+    res.setHeader('Content-Security-Policy', "default-src 'self' *.visualwebsiteoptimizer.com app.vwo.com useruploads.vwo.io; script-src 'self' 'nonce-testing' blob: *.visualwebsiteoptimizer.com app.vwo.com; child-src 'self' blob:; style-src 'self' 'unsafe-inline' *.visualwebsiteoptimizer.com www.w3schools.com app.vwo.com;");
     // res.setHeader('Content-Security-Policy', "default-src 'self' *.visualwebsiteoptimizer.com; script-src 'self' blob: 'unsafe-inline' *.visualwebsiteoptimizer.com app.vwo.com; child-src 'self'; style-src 'self' 'unsafe-inline' *.visualwebsiteoptimizer.com www.w3schools.com");
     res.send(htmlContent);
 });
