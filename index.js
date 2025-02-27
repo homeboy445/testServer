@@ -193,8 +193,8 @@ app.get("/", (req, res) => {
     </body>
     </html>
     `;
-    // res.setHeader('Content-Security-Policy', "default-src 'self' *.visualwebsiteoptimizer.com app.vwo.com useruploads.vwo.io; script-src 'self' blob: 'unsafe-inline' *.visualwebsiteoptimizer.com app.vwo.com; child-src 'self' blob:; style-src 'self' 'unsafe-inline' *.visualwebsiteoptimizer.com www.w3schools.com app.vwo.com");
-    res.setHeader('Content-Security-Policy', "default-src 'self' *.visualwebsiteoptimizer.com; script-src 'self' blob: 'unsafe-inline' *.visualwebsiteoptimizer.com app.vwo.com; child-src 'self'; style-src 'self' 'unsafe-inline' *.visualwebsiteoptimizer.com www.w3schools.com");
+    res.setHeader('Content-Security-Policy', "default-src 'self' *.visualwebsiteoptimizer.com app.vwo.com useruploads.vwo.io; script-src 'self' blob: 'unsafe-inline' *.visualwebsiteoptimizer.com app.vwo.com; child-src 'self' blob:; style-src 'self' 'unsafe-inline' *.visualwebsiteoptimizer.com www.w3schools.com app.vwo.com");
+    // res.setHeader('Content-Security-Policy', "default-src 'self' *.visualwebsiteoptimizer.com; script-src 'self' blob: 'unsafe-inline' *.visualwebsiteoptimizer.com app.vwo.com; child-src 'self'; style-src 'self' 'unsafe-inline' *.visualwebsiteoptimizer.com www.w3schools.com");
     res.send(htmlContent);
 });
 
