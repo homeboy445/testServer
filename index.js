@@ -339,6 +339,11 @@ function syncCookies(request, response) {
     response.writeHead(200, responseHeaders);
     response.end("1");
 }
+
+app.get("/redirect", (req, res) => {
+  res.redirect('https://homeboy445.github.io/Testing-Site/testing.html?accountId=1058577');
+});
+
 // If you are using express framework e.g., you can use the above code as follows
 app.get('/sync', function(request, response) {
     return syncCookies(request, response)
